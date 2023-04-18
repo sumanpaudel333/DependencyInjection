@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- First Bean using property inside bean tag -->
+    <bean class="org.example.Student" name="Student">
+        <property name="id" value="12"/>
+        <property name="studentName" value="Suman"/>
+        <property name="studentAddress" value="Kathmandu"/>
+    </bean>
+    <!-- Second Bean Using P schema -->
+    <bean class="org.example.Student" name="Student1" p:id="23" p:studentName="Shree" p:studentAddress="Lalitpur"/>
+</beans>
