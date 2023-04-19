@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="org.autowire.Address" name="address">
+        <property name="city" value="Kathmandu"/>
+        <property name="country" value="Nepal"/>
+        <property name="street" value="Pulchowk"/>
+    </bean>
+    <!-- Autowiring bean using byName -->
+    <bean class="org.autowire.Employee" name="employee2" autowire="byName"/>
+
+    <!-- Autowiring bean using byType. It looks for type of object available in entire bean
+     If there are two object found in bean, Exception Occurs-->
+    <bean class="org.autowire.Employee" name="employee3" autowire="byType"/>
+
+    <!-- Autowiring bean using constructor -->
+    <bean class="org.autowire.Employee" name="employee4" autowire="constructor"/>
+</beans>

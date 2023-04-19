@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+        <context:annotation-config/>
+    <!--<bean class="org.lifecycle.MovieTicket" name="movieTicket" init-method="init" destroy-method="destroy">
+        <property name="movieName" value="Hunter"/>
+        <property name="price" value="789"/>
+    </bean>
+    <bean class="org.lifecycle.AirlinesTicket" name="airlinesTicket">
+        <property name="airlinesName" value="Buddha Air"/>
+        <property name="ticketPrice" value="4200"/>
+    </bean>-->
+    <bean class="org.lifecycle.EventTicket" name="eventTicket">
+        <property name="eventName" value="Asia Cup"/>
+        <property name="eventPrice" value="200"/>
+    </bean>
+</beans>
