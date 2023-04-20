@@ -3,21 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
-
-
     <context:annotation-config/>
-    <bean class="org.autowire.Address" name="address">
+    <bean class="org.autowire.annotation.Address" name="address1">
         <property name="city" value="Kathmandu"/>
+        <property name="country" value="Nepal"/>
+        <property name="street" value="Baneshwor"/>
+    </bean>
+    <bean class="org.autowire.annotation.Address" name="address2">
+        <property name="city" value="Lalitpur"/>
         <property name="country" value="Nepal"/>
         <property name="street" value="Pulchowk"/>
     </bean>
-    <!-- Autowiring bean using byName -->
-    <bean class="org.autowire.Employee" name="employee2" autowire="byName"/>
-
-    <!-- Autowiring bean using byType. It looks for type of object available in entire bean
-     If there are two object found in bean, Exception Occurs-->
-    <bean class="org.autowire.Employee" name="employee3" autowire="byType"/>
-
-    <!-- Autowiring bean using constructor -->
-    <bean class="org.autowire.Employee" name="employee4" autowire="constructor"/>
+    <bean class="org.autowire.annotation.Employee" name="employee" scope="prototype"/>
 </beans>
